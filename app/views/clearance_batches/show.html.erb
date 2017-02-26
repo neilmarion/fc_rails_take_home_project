@@ -1,5 +1,11 @@
 <h2><%= "Clearance Batch #{@clearance_batch.id}" %></h2>
 
+<% @report_texts.each do |text| %>
+  <%= text %><br>
+<% end %>
+<br>
+<%= "Total price: $#{@total_price}" %>
+
 <table class="table table-striped clearance_batches">
   <thead>
     <tr>
