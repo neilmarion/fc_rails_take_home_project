@@ -15,17 +15,17 @@ def make_items(style,color,sizes: { 'M' => 10, 'S' => 5, 'L' => 10 })
 end
 
 Style.create(name: "Abrianna Lightweight Knit Cardigan",
-             type: "Sweater",  wholesale_price: 10, retail_price: 60).tap { |style|
+             type: "Sweater",  wholesale_price: 10, retail_price: 60, floor_price_sold: 2).tap { |style|
   make_items(style,"Purple")
   make_items(style,"Blue")
 }
 Style.create(name: "Bryan Short-Sleeve Open-Front Cardigan",
-             type: "Sweater",  wholesale_price: 15, retail_price: 60).tap { |style|
+             type: "Sweater",  wholesale_price: 15, retail_price: 60, floor_price_sold: 2).tap { |style|
   make_items(style,"Red")
   make_items(style,"Blue")
 }
 Style.create(name: "Vicky Colorblock Trim Silk Blouse",
-             type: "Top",      wholesale_price: 13, retail_price: 45).tap { |style|
+             type: "Top",      wholesale_price: 13, retail_price: 45, floor_price_sold: 2).tap { |style|
   make_items(style,"White")
 }
 Style.create(name: "Collegno Diamond Print Drawstring Waist Dress",
@@ -44,7 +44,7 @@ Style.create(name: "Leah Straight Leg Cuffed Jean",
   make_items(style,"Black")
 }
 Style.create(name: "Henry Birds on Branch Infinity Scarf",
-             type: "Scarf",    wholesale_price: 2, retail_price: 30).tap { |style|
+             type: "Scarf",    wholesale_price: 2, retail_price: 30, floor_price_sold: 2).tap { |style|
   make_items(style,"Turquoise", sizes: { 'ANY' => 20 })
 }
 Style.create(name: "Blue Camo Print Boyfriend Jeans",
