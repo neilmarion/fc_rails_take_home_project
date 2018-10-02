@@ -15,9 +15,7 @@ class Item < ActiveRecord::Base
   private
 
   def get_price_sold
-    clearance_price = style.wholesale_price * CLEARANCE_PRICE_PERCENTAGE
-
-    clearance_price > style.floor_price_sold.to_f ? clearance_price : style.floor_price_sold.to_f
+    [style.wholesale_price * CLEARANCE_PRICE_PERCENTAGE, style.floor_price_sold.to_f].max
   end
 
 end
